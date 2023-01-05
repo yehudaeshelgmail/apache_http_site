@@ -1,4 +1,5 @@
 pipeline {
+  agent {label "yehuda"}
     stages {
         stage('build') {
             steps {
