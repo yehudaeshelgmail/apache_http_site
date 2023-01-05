@@ -6,6 +6,8 @@ pipeline {
             steps {
                 sh 'mvn --version'
                 sh 'df -k > /tmp/dg.log'
+                sh 'cat /tmp/dg.log'
+                sh 'sleep 2'
             }
         }
     }
