@@ -1,10 +1,7 @@
 pipeline {
-  agent {label "yehuda"}
-    stages {
-        stage('build') {
-            steps {
-                sh 'df -k > /tmp/dg.log'
-            }
-        }
-    }
+node ('master'){
+    stage 'Checkout'
+    checkout scm
+    stage "Build Pex"
+    sh 'df -k > /tmp/dg.log'
 }
